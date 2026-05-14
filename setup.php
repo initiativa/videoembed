@@ -7,7 +7,7 @@ use Glpi\Plugin\Hooks;
 const KEY = 'videoembed';
 const BIG_KEY = 'Videoembed';
 const NAME = 'Video Embed';
-const VERSION = '0.0.1';
+const VERSION = '1.0.0';
 
 function plugin_init_videoembed() : void
 {

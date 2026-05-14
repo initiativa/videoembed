@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <name>Video Embed</name>
+    <key>videoembed</key>
+    <state>development</state>
+    <logo></logo>
+    <description>
+        <short>
+            <en>This plugin adds video embedding cababilities to GLPI.</en>
+        </short>
+        <long>
+        </long>
+    </description>
+    <homepage>https://github.com/initiativa/videoembed</homepage>
+    <download>https://github.com/initiativa/videoembed/releases</download>
+    <issues>https://github.com/initiativa/videoembed/issues</issues>
+    <readme>https://github.com/initiativa/videoembed/blob/main/README.md</readme>
+    <authors>
+        <author>Pietro Lepori - initiativa s.r.l.</author>
+    </authors>
+    <versions>
+        <version>
+            <num>1.0.0</num>
+            <compatibility>~11.0</compatibility>
+            <download_url>https://github.com/initiativa/videoembed/releases/download/1.0.0/videoembed-1.0.0.tar.gz</download_url>
+        </version>
+    </versions>
+    <langs>
+        <lang>en_GB</lang>
+    </langs>
+    <license>GPL-3.0</license>
+</root>
