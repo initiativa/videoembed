@@ -30,4 +30,11 @@
         <lang>en_GB</lang>
     </langs>
     <license>GPL-3.0</license>
+    <tags>
+        <en>
+            <tag>Ticket</tag>
+            <tag>Video</tag>
+            <tag>Knowledge Base</tag>
+        </en>
+    </tags>
 </root>
