@@ -9,6 +9,7 @@
             <en>This plugin adds video embedding cababilities to GLPI.</en>
         </short>
         <long>
+            <en>GLPI plugin to embed videos in any rich text area used within GLPI's objects.</en>
         </long>
     </description>
     <homepage>https://github.com/initiativa/videoembed</homepage>
