@@ -1,6 +1,5 @@
 
 // Debug console logger
-
 function debugLog(...args) {
 	if (window.VIDEOEMBED_DEBUG) {
 		console.log('[video_embed]', ...args);
@@ -27,7 +26,7 @@ tinymce.PluginManager.add('video_embed', (editor) => {
 
 // Intercept tinymce.init to inject plugin + button
 
-// this runs before jQuery ready, so it's in place before tinyMCE.init() is called
+// This runs before jQuery ready, so it's in place before tinyMCE.init() is called
 const _original_tinymce_init = tinymce.init.bind(tinymce);
 tinymce.init = function (config) {
 	if (Array.isArray(config.plugins)) {
@@ -60,7 +59,7 @@ tinymce.init = function (config) {
 };
 
 
-// Decode URL, aux functions
+// Decode URL functions
 
 function extractYouTubeId(url) {
 	const match = url.match(
@@ -70,13 +69,13 @@ function extractYouTubeId(url) {
 }
 
 const VIDEO_EXTENSIONS = {
-	mp4: 'video/mp4',
-	webm: 'video/webm',
-	ogg: 'video/ogg',
-	ogv: 'video/ogg',
-	mov: 'video/quicktime',
-	avi: 'video/x-msvideo',
-	mkv: 'video/x-matroska',
+	mp4:	'video/mp4',
+	webm:	'video/webm',
+	ogg:	'video/ogg',
+	ogv:	'video/ogg',
+	mov:	'video/quicktime',
+	avi:	'video/x-msvideo',
+	mkv:	'video/x-matroska',
 };
 
 function extractVideoMimeType(url) {
@@ -146,7 +145,7 @@ function doVideoEmbedPlaceholdersReplacement(root) {
 	const walker = document.createTreeWalker(root, NodeFilter.SHOW_ALL, {
 		acceptNode(node) {
 			if (node.nodeType === Node.ELEMENT_NODE) {
-				// prune the editor subtree
+				// prune the TinyMCE subtree
 				if (node.matches('textarea')) {
 					return NodeFilter.FILTER_REJECT;
 				}
@@ -208,7 +207,7 @@ function doVideoEmbedPlaceholdersReplacement(root) {
 }
 
 
-// Run in all pages
+// Run in page
 document.addEventListener('DOMContentLoaded', () => {
 		debugLog("register");
 		setTimeout(() => {
@@ -220,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 );
 
 
-// Run on tab load
+// Run in tabs
 $(document).on('glpi.tab.loaded', function (e) {
 	debugLog("tab-enter");
 	replaceVideoEmbedPlaceholders(e.target);
