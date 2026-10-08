@@ -6,7 +6,7 @@ To install it, download the latest release and decompress it in the plugins dire
 Rename, if needed, the directory to `videoembed` and check that the ownership is set to the web server user (using `chown`).
 
 ## Usage
-In any GLPI rich-text area a new button "video" asks for the URL of the video that should be embedded in the text.
+In any GLPI rich-text area a new button "video" asks for the URL of the video that should be embedded in the text.\
 ![screenshot](assets/screenshots/editor-menu.png?raw=true "The rich-text editor menu")
 
 ## Known formats
